@@ -27,7 +27,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
 	private static final String[] PUBLIC = { "/ibpf-oauth/oauth/token" };
 
-	private static final String[] OPERATOR = { "/ibpf-conta/**", "/ibpf-conta-corrente/**"};
+	private static final String[] OPERATOR = { "/ibpf-conta/**", "/ibpf-conta-corrente/**", "/ibpf-conta-saldo/**", "/ibpf-lancamentos/**"};
 
 	private static final String[] ADMIN = { "/ibpf-user/**", "/actuator/**", "/ibpf-oauth/actuator/**" };
 
