@@ -25,11 +25,11 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	@Autowired
 	private JwtTokenStore tokenStore;
 
-	private static final String[] PUBLIC = { "/ibpf-oauth/oauth/token" };
+	private static final String[] PUBLIC = { "/ibpf-oauth/oauth/token", "/ibpf-user/actuator/**", "/ibpf-oauth/actuator/**" };
 
 	private static final String[] OPERATOR = { "/ibpf-conta/**", "/ibpf-conta-corrente/**", "/ibpf-conta-saldo/**", "/ibpf-lancamentos/**", "/ibpf-investimento/**", "/ibpf-cartao-credito/**"};
 
-	private static final String[] ADMIN = { "/ibpf-user/**", "/actuator/**", "/ibpf-oauth/actuator/**" };
+	private static final String[] ADMIN = { "/ibpf-user/**", "/actuator/**" };
 
 	@Override
 	public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
